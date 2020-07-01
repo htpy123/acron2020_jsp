@@ -1,0 +1,6 @@
+@charset "utf-8"; /*한글 인코딩 설정*/
+h1{
+    color: red;
+    background-color: yellow;
+    font-style: italic;
+}
