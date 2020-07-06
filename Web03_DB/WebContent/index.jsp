@@ -9,6 +9,9 @@
 </head>
 <body>
 <div class="container" >
+	<ol>
+		<li class="breadcrumb-item"><a href=""></a></li>
+	</ol>
 	<div class="navbar navbar-expand-sm navbar-dark bg-primary"><!-- bg background -->
 		<a class="navbar-brand" href="${pageContext.request.contextPath }/">Acorn</a>
 		<ul class="navbar-nav">
@@ -20,6 +23,7 @@
 	<ul>
 		<li><a href="member/list.jsp">회원 목록 보기</a></li>
 		<li><a href="todo/list.jsp">할일 목록 보기</a></li>
+		<li><a href="board/list.jsp">글 목록 보기</a></li>
 	</ul>
 </div>
 </body>
