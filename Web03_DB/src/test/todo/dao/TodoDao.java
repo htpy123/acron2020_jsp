@@ -8,7 +8,7 @@ import java.util.List;
 
 import test.member.dto.MemberDto;
 import test.todo.dto.TodoDto;
-import text.util.DbcpBean;
+import test.util.DbcpBean;
 
 public class TodoDao {
 	//자신의 참조값을 담을 static 필드

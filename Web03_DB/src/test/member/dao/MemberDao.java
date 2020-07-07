@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import test.member.dto.MemberDto;
-import text.util.DbcpBean;
+import test.util.DbcpBean;
 
 public class MemberDao {
 	private static MemberDao dao;
