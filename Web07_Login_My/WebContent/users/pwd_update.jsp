@@ -3,15 +3,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
-	String pwd = request.getParameter("pwd");
-	String pwd1 = request.getParameter("pwd1");
-	String pwd2 = request.getParameter("pwd2");
-	
-	UsersDto Dto = new UsersDto();
-	if(pwd.equals(UsersDao.getInstance().getData(pwd)))
-	Dto.setPwd(pwd);
+	//폼전송되는 비밀번호를 읽어온다.
+	String pwd=request.getParameter("pwd");
+	String newPwd=request.getParameter("newPwd");
+	//세션 영역에서 아이디 읽어오기
+	String id=(String)session.getAttribute("id");
+	//UsersDto 객체를 생성해서 담는다
+	UsersDto dto = new UsersDto();        //UsersDto dto = null; 이런식의 코드 실행시 nullpointexception
+	dto.setPwd(pwd);
+	dto.setNewPwd(newPwd);
+	dto.setId(id);
+	//UsersDao 객체를 이용해서 수정반영하고 성공 여부를 리턴 받는다
+	boolean isSuccess=UsersDao.getInstance().updatePwd(dto);
 %>
-    
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,6 +23,10 @@
 <title>/users/pwd_update.jsp</title>
 </head>
 <body>
-	
+	<%if(isSuccess){ %>
+		<p>비밀 번호를 수정햇습니다 <a href="${pageContext.request.ContextPath }/users/info.jsp">확인</a></p>
+	<%}else {%>
+		<p>이전 비밀번호가 일치 하지 않습니다 <a href="${pageContext.request.ContextPath }/uesrs/info.jsp">다시 시도</a></p>
+	<%} %>
 </body>
 </html>
