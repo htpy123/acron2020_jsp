@@ -22,7 +22,7 @@
 		<%-- 원래 가려던 목적지 정보를 url 이라는 파라미터 명으로 가지고 간다 --%>
 		<div class="form-group">
 			<label for="id">아이디</label>
-			<input type="text" name="id" id="id"/>
+			<input type="text" name="url" id="id"/>
 		</div>
 		<div class="form-group">
 			<label for="pwd">비밀번호</label>
