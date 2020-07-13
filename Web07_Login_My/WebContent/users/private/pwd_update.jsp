@@ -20,13 +20,13 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>/users/pwd_update.jsp</title>
+<title>/users/private/pwd_update.jsp</title>
 </head>
 <body>
 	<%if(isSuccess){ %>
-		<p>비밀 번호를 수정햇습니다 <a href="${pageContext.request.ContextPath }/users/info.jsp">확인</a></p>
+		<p>비밀 번호를 수정햇습니다 <a href="${pageContext.request.ContextPath }/users/private/info.jsp">확인</a></p>
 	<%}else {%>
-		<p>이전 비밀번호가 일치 하지 않습니다 <a href="${pageContext.request.ContextPath }/uesrs/info.jsp">다시 시도</a></p>
+		<p>이전 비밀번호가 일치 하지 않습니다 <a href="${pageContext.request.ContextPath }/uesrs/private/pwd_updateform.jsp">다시 시도</a></p>
 	<%} %>
 </body>
 </html>

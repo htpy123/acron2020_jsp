@@ -16,12 +16,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>/users/update.jsp</title>
+<title>/users/private/update.jsp</title>
 </head>
 <body>
 	<script>
 		alert("수정 했다")
-		location.herf="${pageContext.request.ContextPath}/users/info.jsp";
+		location.herf="${pageContext.request.ContextPath}/users/private/info.jsp";
 	</script>
 </body>
 </html>

@@ -13,7 +13,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>/users/updateform.jsp</title>
+<title>/users/private/updateform.jsp</title>
 </head>
 <body>
 	<div class="container">
