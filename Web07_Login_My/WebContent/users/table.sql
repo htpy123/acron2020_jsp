@@ -10,7 +10,7 @@ CREATE TABLE board_file(
 );
 CREATE SEQUENCE board_file_seq;
 
-CREATE TABLE uesrs(
+CREATE TABLE users(
 	id VARCHAR2(100) PRIMARY KEY,
 	pwd VARCHAR2(100) NOT NULL,
 	email VARCHAR2(100),
