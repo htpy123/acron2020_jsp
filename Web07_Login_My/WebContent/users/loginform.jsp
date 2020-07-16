@@ -8,7 +8,7 @@
 </head>
 <body>
 <%
-	// url 파라미터가 넘어오는지 읽어와 보기 
+	// url 파라미터가 넘어오는지 읽어와 보기   
 	String url=request.getParameter("url");
 	if(url==null){//목적지 정보가 없다면
 		String cPath=request.getContextPath();
