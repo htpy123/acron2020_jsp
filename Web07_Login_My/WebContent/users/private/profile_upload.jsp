@@ -41,7 +41,7 @@
     System.out.println(uploadPath);
     //전송된 파라미터의 한글 인코딩 설정 
     upload.setHeaderEncoding("utf-8");
-  
+    
     //WebContent 안에서 이미지 파일이 저장된 경로 
   	String imageSrc="";
     
@@ -72,6 +72,7 @@
                     imageSrc="/upload/"+saveFileName;
                     
                 }else{//폼 필드라면 
+                	
                 
                 }//if
             }//for
