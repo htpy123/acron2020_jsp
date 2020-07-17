@@ -3,9 +3,18 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+	//수정할 
 	String id=(String)session.getAttribute("id");
-	//수정할 정보를 UsersDto 객체에 담고
+	//수정할 이메일 주소
 	String email=request.getParameter("email");
+	//수정할 프로파일
+	String profile=request.getParameter("profile");
+	if(profile.equals("null")){//프로필 이미지를 수정하지 않으면
+		profile=null;
+	}
+	
+	
+	//수정할 정보를 UsersDto 객체에 담고
 	UsersDto dto = new UsersDto();
 	dto.setId(id);
 	dto.setEmail(email);
