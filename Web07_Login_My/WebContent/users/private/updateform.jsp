@@ -32,9 +32,9 @@
 <div class="container">
 	<h1>회원정보 수정 폼 입니다.</h1>
 	<%if(dto.getProfile()==null){ %>
-		<img id="profileImage" src="${pageContext.request.contextPath }/images/yellowbird.png"/>
+		<a id="profilelink" href="javascript:"><img id="profileImage" src="${pageContext.request.contextPath }/images/yellowbird.png"/></a>
 	<%}else{ %>
-		<img id="profileImage" src="${pageContext.request.contextPath }<%=dto.getProfile()%>"/>
+		<a id="profilelink" href="javascript:"><img id="profileImage" src="${pageContext.request.contextPath }<%=dto.getProfile()%>"/></a>
 	<%} %>
 	<form action="update.jsp" method="post">
 		<input type="hidden" name="profile" id="profile" 
@@ -61,10 +61,16 @@
 <script src="${pageContext.request.contextPath }/js/jquery.form.min.js"></script>
 <script>
 	//프로필 이미지를 클릭했을때 실행할 함수 등록 
-	$("#profileImage").on("click", function(){
+	/*$("#profileImage").on("click", function(){
 		//input type="file" 을 강제 클릭한다.
 		$("#image").click();
+	});*/
+	//프로필 이미지를 클릭했을때 실행할 함수 등록
+	$("#profilelink").on("click",function(){
+		//input type="file" 을 강제 클릭한다
+		$("#image").click();
 	});
+	
 	
 	//이미지를 선택했을때 실행할 함수 등록
 	$("#image").on("change", function(){
