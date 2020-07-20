@@ -48,8 +48,8 @@
   	String caption="";
     //WebContent 안에서 이미지 파일이 저장된 경로 
   	String imagePath="";
-    //작업의 성공 여부
-    boolean isSuccess=false;
+    //작업의 성공 여부 
+  	boolean isSuccess=false;
     try {
         //폼전송된 아이템 목록 얻어오기 
         List<FileItem> formItems = upload.parseRequest(request);
@@ -85,18 +85,18 @@
                 	}
                 
                 }//if
-            }//for
+            }//for     
         }//if
         
         //작성자
-        String writer = (String)session.getAttribute("id");
-        //업로드된 사진 정보를 Dto 에 담고
-        GalleryDto dto = new GalleryDto();
+        String writer=(String)session.getAttribute("id");
+        //업로드된 사진 정보를 Dto 에 담고 
+        GalleryDto dto=new GalleryDto();
         dto.setWriter(writer);
         dto.setCaption(caption);
         dto.setImagePath(imagePath);
         //DB 에 저장하기
-        isSuccess = GalleryDao.getInstance().insert(dto);
+        isSuccess=GalleryDao.getInstance().insert(dto);
     } catch (Exception ex) {
      
         System.out.println(ex.getMessage());
