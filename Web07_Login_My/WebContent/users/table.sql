@@ -1,3 +1,16 @@
+CREATE TABLE board_cafe(
+	num NUMBER PRIMARY KEY,
+	writer VARCHAR2(100) NOT NULL,
+	title VARCHAR2(100) NOT NULL,
+	content CLOB,
+	viewCount NUMBER,	--조회수
+	regdate DATE		--날짜
+);
+
+CREATE SEQUENCE board_cafe_seq;
+
+
+
 -- gallery에 사용될 테이블
 CREATE TABLE board_gallery(
 	num NUMBER PRIMARY KEY,
