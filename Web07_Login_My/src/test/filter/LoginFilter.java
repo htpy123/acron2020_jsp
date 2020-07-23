@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter({"/users/private/*","/test/*","/file/private/*","/gallery/private/*"}) //test폴더도 로그인 필터링 설정
+@WebFilter({"/users/private/*","/test/*","/file/private/*","/gallery/private/*","/cafe/private/*"}) //test폴더도 로그인 필터링 설정
 public class LoginFilter implements Filter{
 
 	@Override
