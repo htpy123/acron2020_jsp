@@ -1,5 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	
+
+	
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,6 +32,9 @@
 </style>
 </head>
 <body>
+<%
+
+%>
 <div class="container">
 	<h1>스크롤 테스트</h1>
 	<div class="spacer"></div>
@@ -48,7 +56,7 @@
 		//document(문서)의 높이
 		var documentHeight=$(document).height();
 		//바닥까지 스크롤 되었는지 여부
-		var isBottom = scrollTop+windowHeight == documentHeight;
+			
 		if(isBottom){//만일 바닥까지 스크롤 했다면...
 			//로딩 이미지를 띄우고 
 			$(".loader").show();
