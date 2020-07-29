@@ -26,14 +26,46 @@
 <ul>
 	<%for(String tmp:list){ %>
 		<li><%=tmp %></li>
-	<%} %>
+	<%}; %>
 </ul>
 
 <h1>친구 목록 입니다 (EL+JSTL 활용)</h1>
+<%/*${requestScope.list에서 requestScope} 삭제가능  
+	html 주석코드인 <!-- -->로 감싸서 주석처리를 하면 오류 발생 */%> 
 <ul>
-	<c:forEach var="tmp" items="${requestScope.list }"><!-- ${requestScope.list에서 reqeustScope 삭제가능 -->
+	<c:forEach var="tmp" items="${requestScope.list }">
 		<li>${tmp }</li>
 	</c:forEach>
 </ul>
+
+<h1>친구 목록 입니다 인덱스 표시</h1>
+<ul>
+	<c:forEach var="tmp" items="${list }">
+		<li data-index="${status.index }">${tmp } <strong>${status.index }</strong></li>
+	</c:forEach>
+</ul>
+
+<h1>친구 목록 입니다 순서 표시</h1>
+<ul>
+	<c:forEach var="tmp" items="${list }">
+		<li data-index="${status.count }">${tmp } <strong>${status.index }</strong></li>
+	</c:forEach>
+</ul>
+
+<h1>친구 목록 입니다 처음 인지 여부</h1>
+<ul>
+	<c:forEach var="tmp" items="${list }">
+		<li>${tmp } <strong>첫번째 : ${status.first }</strong></li>
+	</c:forEach>
+</ul>
+
+<h1>친구 목록 입니다 마지막 인지 여부</h1>
+<ul>
+	<c:forEach var="tmp" items="${list }">
+		<li>${tmp } <strong>마지막 : ${status.last }</strong></li>
+	</c:forEach>
+</ul>
+
+<a href="jstl_test3.jsp">다음 예제</a>
 </body>
 </html>
