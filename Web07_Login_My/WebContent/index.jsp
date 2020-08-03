@@ -53,6 +53,7 @@
 		<li><a href="test/jstl_test3.jsp">JSTL test3</a></li>
 		<li><a href="test/jstl_test4.jsp">JSTL test4</a></li>
 		<li><a href="test/jstl_test5.jsp">JSTL test5</a></li>
+		<li><a href="test/regular_ex.jsp">정규표현식 테스트1</a></li>
 	</ul>
 </div>
 </body>
